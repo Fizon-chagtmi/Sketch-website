@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  ::selection{
+    background-color: #3E3940;
+  }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #F2F2F2;
+}
+.navbar {
+  background: transparent;
+  transition: all .5s;
+}
+.nav-link {
+  color: #252126;
+  transition: .4s;
+  font-weight: 650;
+  margin-left: 20px;
+  font-size: 20px;
+  margin-right: 20px;
+}
+.nav-link:hover {
+  transition: .4s;
+  color: #F2F2F2;
+  background-color: #8C8079;
+}
+.navbar.active {
+    background: #D9D9D9;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #252126;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #D9D9D9;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #252126;
+    }
+}
+.about {
+  width: 100%;
+  margin-top: 70px;
+  height: 100vh;
+  background: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .content img {
+  height: auto;
+  width: 600px;
+  max-width: 100%;
+}
+.text {
+  width: 550px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+.content {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.text h1 {
+  color: #252126;
+  font-weight: 600;
+  font-size: 85px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.text h5 {
+  color: #3E3940;
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.text p {
+  color: rgba(62, 57, 64, 0.8);
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 1180px) {
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 70px 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .about .content img {
+    margin-bottom: 35px;
+  }
+  .text h1 {
+    font-size: 60px;
+    margin-bottom: 25px;
+  }
+}

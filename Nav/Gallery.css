@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  ::selection{
+    background-color: #3E3940;
+  }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #F2F2F2;
+}
+.navbar {
+  background: transparent;
+  transition: all .5s;
+}
+.nav-link {
+  color: #252126;
+  transition: .4s;
+  font-weight: 650;
+  margin-left: 20px;
+  font-size: 20px;
+  margin-right: 20px;
+}
+.nav-link:hover {
+  transition: .4s;
+  color: #F2F2F2;
+  background-color: #8C8079;
+}
+.navbar.active {
+    background: #D9D9D9;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #252126;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #D9D9D9;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #252126;
+    }
+}
+.gallery-nav {
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.gallery-nav ul {
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+}
+.gallery-nav ul li {
+  display: inline-grid;
+  margin: 0 10px;
+  cursor: pointer;
+  color: #252126;
+}
+.gallery-nav ul li:hover {
+  color: #8C8079;
+}
+.gallery-nav ul li.active {
+  color: #8C8079;
+}
+.gallery-nav ul li span {
+  padding: 15px 0;
+  border-bottom: 2px solid transparent;
+}
+.gallery-nav ul li.current span {
+  border-bottom: 2px solid #8C8079;
+  transition: .8s;
+}
+.grid-item figure {
+  position: relative;
+  overflow: hidden;
+}
+.grid-item figure img {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.grid-item figure figcaption {
+  position: absolute;
+  padding: 15px;
+  height: 100%;
+  width: 100%;
+  top: auto;
+  left: 0;
+  color: #252126;
+  bottom: 0;
+  z-index: 10;
+  transition: .5s;
+}
+.grid-item figure figcaption::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all .4s ease-out;
+  transform: translateX(0) translateY(0) rotateZ(0) rotate(0deg) scale(0.95);
+  z-index: 1;
+  opacity: 0;
+}
+.grid-item figure figcaption .fab {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 35px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  top: 45%;
+  margin-top: -22px;
+  transform: translateX(0px) translateY(0) translateZ(0) rotate(0deg) scale(1);
+  opacity: 0;
+  letter-spacing: 0px;
+}
+figcaption .g-title {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  right: 0;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: capitalize;
+  top: 50%;
+  margin-top: 30px;
+  transform: translateX(80px) translateY(0) translateZ(0) rotate(0deg) scale(1);
+  transition: all .4s ease-out;
+  opacity: 0;
+  letter-spacing: 0px;
+}
+figcaption .sub-title {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  font-size: 13px;
+  top: 50%;
+  margin-top: 30px;
+  transform: translateX(-70px) translateY(0) translateZ(0) rotate(0deg) scale(1);
+  transition: .5s;
+  opacity: 0;
+  letter-spacing: 0px;
+}
+.grid-item figure:hover {
+  transition: all .4s ease-out;
+}
+figure:hover figcaption {
+  color: #252126;
+  background: rgba(217, 217, 217, 0.9);
+}
+.grid-item figure:hover figcaption::after {
+  opacity: 1;
+  transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(1);
+  transition: all .4s ease-out;
+}
+.grid-item figure:hover figcaption .g-title {
+  transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(1);
+  transition: .4s;
+  margin-top: -10px;
+  opacity: 1;
+}
+.grid-item figure:hover figcaption .sub-title {
+  transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(1);
+  transition: .6s;
+  opacity: 1;
+}
